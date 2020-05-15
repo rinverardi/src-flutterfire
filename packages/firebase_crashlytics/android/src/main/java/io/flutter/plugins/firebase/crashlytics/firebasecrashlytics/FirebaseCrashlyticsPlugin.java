@@ -142,7 +142,7 @@ public class FirebaseCrashlyticsPlugin implements FlutterPlugin, MethodCallHandl
       return new StackTraceElement(
           className == null ? "" : className, methodName, fileName, Integer.parseInt(lineNumber));
     } catch (Exception e) {
-      Log.e(TAG, "Unable to generate stack trace element from Dart side error.");
+      Log.e(TAG, "Unable to generate stack trace element from Dart side error.", e);
       return null;
     }
   }
