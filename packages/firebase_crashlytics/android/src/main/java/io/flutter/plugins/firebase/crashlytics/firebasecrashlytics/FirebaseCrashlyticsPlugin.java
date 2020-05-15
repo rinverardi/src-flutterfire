@@ -139,10 +139,10 @@ public class FirebaseCrashlyticsPlugin implements FlutterPlugin, MethodCallHandl
       String className = errorElement.get("class");
       String methodName = errorElement.get("method");
 
-      Log.i("XXX", "file == " + fileName);
-      Log.i("XXX", "line == " + lineNumber);
-      Log.i("XXX", "class == " + className);
-      Log.i("XXX", "method == " + methodName);
+      Log.e(TAG, "file == " + fileName);
+      Log.e(TAG, "line == " + lineNumber);
+      Log.e(TAG, "class == " + className);
+      Log.e(TAG, "method == " + methodName);
 
       return new StackTraceElement(
           className == null ? "" : className, methodName, fileName, Integer.parseInt(lineNumber));
